@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
 
 body,
 html {
@@ -38,14 +38,14 @@ html {
   color: rgb(0, 0, 0);
 }
 
-.Home__container {
+.home-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 @media (max-width: 350px) {
-  .Home__container {
+  .home-container {
     justify-content: unset;
   }
 }
@@ -70,7 +70,7 @@ html {
 
 .burgerCardItem,
 .burgerListaItem {
-  font-family: 'Exo';
+  font-family: "Exo";
   background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   padding: 10px;
@@ -100,8 +100,8 @@ html {
   flex-direction: column;
 }
 
-.burgerCardItem__sabor,
-.burgerListaItem__sabor {
+.burgerCardItem__nome,
+.burgerListaItem__nome {
   font-size: 1.5em;
   font-weight: 700;
   line-height: 100%;
@@ -120,4 +120,44 @@ html {
 .burgerListaItem__foto {
   height: 150px;
   margin-right: -60px;
+}
+
+.burger-escolhido-espaco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+#idburger {
+  padding: 0.5rem;
+  width: 315px;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+#idburgerButton {
+  background-color: transparent;
+  border: 2px solid #9400d3;
+  padding: 0.4rem;
+  color: #9400d3;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  width: 330px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+#idburgerButton:hover {
+  background-color: #9400d3;
+  color: #ffffff;
+}
+
+#burger-escolhido-input-espaco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }

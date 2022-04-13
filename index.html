@@ -9,15 +9,20 @@
   </head>
   <body>
     <div class="home">
+        <h2>Pesquisar burger</h2>
+        <div class="burger-escolhido-espaco">
+            <div id="burger-escolhido-input-espaco">
+                <input type="number" id="idburger" placeholder="Digite o ID do burger e clique em 'Escolher'" />
+                <button id="idburgerButton" onclick="findByIdPaletas()">ESCOLHER</button>
+            </div>
+            <div id="burgerEscolhido">
+
+            </div>
+        </div>
       <h2>Os burgers</h2>
       <div class="home-container">
-        <div class="burgerListaItem">
-            <div>
-                <div class="burgerListaItem-nome">Voando Alto</div>
-                <div class="burgerListaItem-descricao">Pão brioche/caseirinho, burguer de fraldinha 150g (fraldinha), alface, cebola caramelizada, queijo prato e maionese temperada (alho e temperos frescos)</div>
-                <div class="burgerListaItem-preco">R$27,90</div>
-            </div>
-            <img class="paletaListaItem-foto" src="/assets/images/voando-alto.jpg" alt="burger-voando-alto">
+            <div class="burgerLista" id="burgerList"></div>
+            <img class="burgerListaItem-foto" src="/assets/images/voando-alto.jpg" alt="burger-voando-alto">
         </div>
       </div>
     </div>
