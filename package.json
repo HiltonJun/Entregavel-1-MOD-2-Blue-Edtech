@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "name": "entregavel-1-mod-2-blue-edtech",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiltonJun/Entregavel-1-MOD-2-Blue-Edtech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HiltonJun/Entregavel-1-MOD-2-Blue-Edtech/issues"
+  },
+  "homepage": "https://github.com/HiltonJun/Entregavel-1-MOD-2-Blue-Edtech#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
