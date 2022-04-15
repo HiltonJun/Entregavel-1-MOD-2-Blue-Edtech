@@ -33,6 +33,26 @@
           </div>
         </div>
       </div>
+      <section class="button-modal-create">
+        <button type="button" class="default-button" onclick="abrirModalCadastro()">Cadastrar Burgers</button>
+      </section>
+      <section class="modal-overlay" id="overlay">
+        <div class="modal">
+          <div class="modal-header">
+            <h2>Cadastrar um novo burger</h2>
+            <a onclick="fecharmodalCadastro()" class="close-modal">x</a>
+          </div>
+          <div class="modal-body">
+            <div>
+              <input type="text" name="nome" id="nome" placeholder="Nome do burger">
+              <input type="text" name="preco" id="preco" placeholder="Preço do burger">
+              <textarea type="text" name="descricao" id="descricao" placeholder="Descrição do burger" rows="5"></textarea>
+              <input type="text" name="foto" id="foto" placeholder="Link para foto do burger">
+              <button onclick="createBurger()">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </section>
       <h2>Pesquisar Burger</h2>
       <div class="burger-escolhido-espaco">
           <div id="burger-escolhido-input-espaco">

@@ -33,12 +33,6 @@ const findBurgerByIdService = (id) => {
   return burgers.find((burger) => burger.id == id);
 };
 
-const createBurgerController = (req, res) => {
-  const burger = req.body;
-  const newBurger = burgersService.createBurgerService(burger);
-  res.send(newBurger);
-};
-
 const createBurgerService = (newBurger) => {
     const newId = burgers.length + 1;
     newBurger.id = newId;
@@ -49,6 +43,5 @@ const createBurgerService = (newBurger) => {
 module.exports = {
   findBurgersService,
   findBurgerByIdService,
-  createBurgerController,
   createBurgerService,
 };

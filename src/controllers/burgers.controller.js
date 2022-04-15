@@ -11,7 +11,15 @@ const findBurgerByIdController = (req, res) => {
   res.send(chosenBurger);
 };
 
+const createBurgerController = (req, res) => {
+    const burger = req.body;
+    const newBurger = burgersService.createBurgerService(burger);
+    res.send(newBurger);
+  };
+
 module.exports = {
   findBurgersController,
   findBurgerByIdController,
+  createBurgerController,
+
 };
