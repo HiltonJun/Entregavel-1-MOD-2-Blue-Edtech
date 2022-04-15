@@ -7,11 +7,11 @@ html {
   width: 100%;
   min-height: 100vh;
   overflow: auto;
-  background-color: black;
-  font-family: sans-serif;
+  background-color: rgb(255, 255, 255);
+  font-family: "Exo", sans-serif;
 }
 
-.home {
+.Home {
   position: relative;
   background-image: radial-gradient(
     farthest-corner at 40px 40px,
@@ -22,104 +22,250 @@ html {
   margin: 15px;
   padding: 15px;
   border-radius: 20px;
-  color: goldenrod;
-  box-shadow: 0px 0px 15px rgba(172, 164, 164, 0.3);
+  color: black;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
-.home > h2 {
+.Home > h2 {
   display: flex;
   justify-content: space-around;
   color: rgb(0, 0, 0);
 }
 
-.home > div {
+.Home > div {
   display: flex;
   justify-content: center;
   color: rgb(0, 0, 0);
 }
 
-.home-container {
+.Home__container {
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
 
 @media (max-width: 350px) {
-  .home-container {
+  .Home__container {
     justify-content: unset;
   }
 }
 
-.burgerLista {
+.Header {
+  max-width: 1110px;
+  margin: 0 auto 25px auto;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0 35px 0;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 305px;
+  height: 45px;
+}
+
+.Logo__titulo {
+  position: absolute;
+  left: 55px;
+  font-family: "Exo";
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.Logo__icone {
+  position: absolute;
+  left: -20px;
+  top: 8px;
+}
+
+@media (max-width: 840px) {
+  .Logo__icone {
+    width: 30%;
+    left: -40px;
+  }
+  .Logo {
+    min-width: 300px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 376px) {
+  .Logo {
+    min-width: 210px;
+  }
+  .Logo__icone {
+    width: 35%;
+  }
+}
+
+.Sacola {
+  position: relative;
+}
+
+.Sacola__icone {
+  cursor: pointer;
+}
+
+.Sacola__badge {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  color: white;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1220px) {
+  .Header {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 840px) {
+  .Header {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Header {
+    max-width: 250px;
+  }
+
+  .row {
+    column-gap: 20px;
+  }
+
+  .Logo__titulo {
+    font-size: 1.5em;
+  }
+}
+
+.BurgerLista {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 25px 50px;
 }
 
 @media (max-width: 1220px) {
-  .burgerLista {
+  .BurgerLista {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 840px) {
-  .burgerLista {
+  .BurgerLista {
     grid-template-columns: 1fr;
   }
 }
 
-.burgerCardItem,
-.burgerListaItem {
+.BurgerCardItem,
+.BurgerListaItem {
   font-family: "Exo";
   background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   padding: 10px;
-  width: 315px;
+  width: 600px;
   display: flex;
   justify-content: space-around;
 }
 
-.burgerCardItem {
+@media (max-width: 376px) {
+  .BurgerListaItem {
+    flex-direction: column;
+    min-height: 450px;
+  }
+  .BurgerListaItem > div {
+    margin: 20px;
+    gap: 15px;
+  }
+  .BurgerListaItem > img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+  }
+}
+
+.BurgerCardItem {
   margin: 20px 0;
   height: 150px;
   width: auto;
 }
 
 @media (max-width: 400px) {
-  .burgerCardItem,
-  .burgerListaItem {
+  .BurgerCardItem,
+  .BurgerListaItem {
     width: 210px;
     height: 180px;
   }
 }
 
-.burgerCardItem > div,
-.burgerListaItem > div {
+@media (max-width: 376px) {
+  .BurgerCardItem {
+    flex-direction: column;
+    min-height: 450px;
+  }
+  .BurgerCardItem > div {
+    margin: 20px;
+    gap: 15px;
+  }
+  .BurgerCardItem > img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+  }
+}
+
+.BurgerCardItem > div,
+.BurgerListaItem > div {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 
-.burgerCardItem__nome,
-.burgerListaItem__nome {
+.BurgerCardItem__nome,
+.BurgerListaItem__nome {
   font-size: 1.5em;
   font-weight: 700;
   line-height: 100%;
 }
 
-.burgerCardItem__descricao,
-.burgerListaItem__descricao {
+.BurgerCardItem__descricao,
+.BurgerListaItem__descricao {
   font-size: 0.85em;
 }
 
-.burgerCardItem__preco,
-.burgerListaItem__preco {
+.BurgerCardItem__preco,
+.BurgerListaItem__preco {
   color: darkviolet;
+  background-color: whitesmoke;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 5px;
 }
 
-.burgerListaItem__foto {
+.BurgerListaItem__foto,
+.BurgerCardItem__foto {
   height: 150px;
-  margin-right: -60px;
+  border-radius: 10px;
+  margin-left: 5px;
 }
 
 .burger-escolhido-espaco {
@@ -129,14 +275,14 @@ html {
   padding: 2rem;
 }
 
-#idburger {
+#idBurger {
   padding: 0.5rem;
   width: 315px;
   border: none;
   border-radius: 0.2rem;
 }
 
-#idburgerButton {
+#idBurgerButton {
   background-color: transparent;
   border: 2px solid #9400d3;
   padding: 0.4rem;
@@ -150,7 +296,7 @@ html {
   font-size: 1rem;
 }
 
-#idburgerButton:hover {
+#idBurgerButton:hover {
   background-color: #9400d3;
   color: #ffffff;
 }
