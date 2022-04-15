@@ -56,6 +56,10 @@ function abrirModalCadastro() {
 
 function fecharModalCadastro() {
   document.querySelector(".modal-overlay").style.display = "none";
+  document.querySelector("#nome").value = "";
+  document.querySelector("#preco").value = 0;
+  document.querySelector("#descricao").value = "";
+  document.querySelector("#foto").value = "";
 }
 
 async function createBurger() {
@@ -83,9 +87,9 @@ async function createBurger() {
 
   const html = `<div class="BurgerListaItem">
   <div>
-    <div class="BurgerListaItem__sabor">${novoBurger.nome}</div>
-    <div class="BurgerListaItem__preco">R$ ${novoBurger.preco.toFixed(2)}</div>
+    <div class="BurgerListaItem__nome">${novoBurger.nome}</div>
     <div class="BurgerListaItem__descricao">${novoBurger.descricao}</div>
+    <div class="BurgerListaItem__preco">R$ ${novoBurger.preco}</div>
   </div>
     <img class="BurgerListaItem__foto" src=${
       novoBurger.foto
@@ -93,4 +97,6 @@ async function createBurger() {
   </div>`;
 
   document.getElementById("burgerList").insertAdjacentHTML("beforeend", html);
+
+  fecharModalCadastro();
 };
