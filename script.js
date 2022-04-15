@@ -49,3 +49,48 @@ const findByIdBurgers = async () => {
     alt=${`${burger.nome}`} />
   </div>`;
 };
+
+function abrirModalCadastro() {
+  document.querySelector(".modal-overlay").style.display = "flex";
+}
+
+function fecharModalCadastro() {
+  document.querySelector(".modal-overlay").style.display = "none";
+}
+
+async function createBurger() {
+  const nome = document.querySelector("#nome").value;
+  const preco = document.querySelector("#preco").value;
+  const descricao = document.querySelector("#descricao").value;
+  const foto = document.querySelector("#foto").value;
+
+  const burger = {
+    nome,
+    preco,
+    descricao,
+    foto,
+  };
+  const response = await fetch(baseUrl + "/create", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    mode: "cors",
+    body: JSON.stringify(burger),
+  });
+
+  const novoBurger = await response.json();
+
+  const html = `<div class="BurgerListaItem">
+  <div>
+    <div class="BurgerListaItem__sabor">${novoBurger.nome}</div>
+    <div class="BurgerListaItem__preco">R$ ${novoBurger.preco.toFixed(2)}</div>
+    <div class="BurgerListaItem__descricao">${novoBurger.descricao}</div>
+  </div>
+    <img class="BurgerListaItem__foto" src=${
+      novoBurger.foto
+    } alt=${`${novoBurger.nome}`} />
+  </div>`;
+
+  document.getElementById("burgerList").insertAdjacentHTML("beforeend", html);
+};
