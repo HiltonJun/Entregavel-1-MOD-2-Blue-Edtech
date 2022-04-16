@@ -7,7 +7,7 @@ const route = require('./src/routes/burgers.route');
 app.use(cors());
 app.use(express.json());
 
-app.use('/burgers', route);
+app.use('/burger', route);
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
