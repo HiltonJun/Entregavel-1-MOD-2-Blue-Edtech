@@ -47,9 +47,15 @@ const updateBurgerService = (id, burgerEdited) => {
   return burgerEdited;
 };
 
+const deleteBurgerService = (id) => {
+  const burgerIndex = burgers.findIndex((burger) => burger.id == id);
+  return burgers.splice(burgerIndex, 1);
+};
+
 module.exports = {
   findBurgersService,
   findBurgerByIdService,
   createBurgerService,
   updateBurgerService,
+  deleteBurgerService,
 };

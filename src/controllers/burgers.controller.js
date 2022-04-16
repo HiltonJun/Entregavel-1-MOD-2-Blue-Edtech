@@ -24,9 +24,16 @@ const updateBurgerController = (req, res) => {
   res.send(updatedBurger);
 };
 
+const deleteBurgerController = (req, res) => {
+  const idParam = req.params.id;
+  burgersService.deleteBurgerService(idParam);
+  res.send({ message: "Burger deletado com sucesso!" });
+};
+
 module.exports = {
   findBurgersController,
   findBurgerByIdController,
   createBurgerController,
   updateBurgerController,
+  deleteBurgerController,
 };
