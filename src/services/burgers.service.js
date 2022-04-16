@@ -34,14 +34,22 @@ const findBurgerByIdService = (id) => {
 };
 
 const createBurgerService = (newBurger) => {
-    const newId = burgers.length + 1;
-    newBurger.id = newId;
-    burgers.push(newBurger);
-    return newBurger;
-  };
+  const newId = burgers.length + 1;
+  newBurger.id = newId;
+  burgers.push(newBurger);
+  return newBurger;
+};
+
+const updateBurgerService = (id, burgerEdited) => {
+  burgerEdited["id"] = id;
+  const burgerIndex = burgers.findIndex((burger) => burger.id == id);
+  burgers[burgerIndex] = burgerEdited;
+  return burgerEdited;
+};
 
 module.exports = {
   findBurgersService,
   findBurgerByIdService,
   createBurgerService,
+  updateBurgerService,
 };
