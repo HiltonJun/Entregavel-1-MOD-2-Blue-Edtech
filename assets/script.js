@@ -14,15 +14,23 @@ async function findAllBurgers() {
             <div class="BurgerListaIt__nome">${burger.nome}</div>
             <div class="BurgerListaItem__descricao">${burger.descricao}</div>
             <div class="BurgerListaItem__botton">
-              <div class="BurgerListaItem__preco">R$ ${burger.preco}</div>
+              <div class="BurgerListaItem__preco">R$ ${burger.preco.toFixed(
+                2
+              )}</div>
               <div class="BurgerListaItem__acoes Acoes">
-                <button class="Acoes__editar btn" onclick="abrirModal(${burger.id})"><img src="assets/icons/pencil.png" / width="20px"></button> 
-                <button class="Acoes__apagar btn" onclick="abrirModalDelete(${burger.id})"><img src="assets/icons/trash.png" / width="20px"></button> 
+                <button class="Acoes__editar btn" onclick="abrirModal(${
+                  burger.id
+                })"><img src="assets/icons/pencil.png" / width="20px"></button> 
+                <button class="Acoes__apagar btn" onclick="abrirModalDelete(${
+                  burger.id
+                })"><img src="assets/icons/trash.png" / width="20px"></button> 
               </div>
             </div>
         </div>
         
-        <img class="BurgerListaItem__foto" src="${burger.foto}" alt="${burger.nome}" />
+        <img class="BurgerListaItem__foto" src="${burger.foto}" alt="${
+        burger.nome
+      }" />
 
         
     </div>
@@ -44,11 +52,17 @@ async function findByIdBurgers() {
   <div>
       <div class="BurgerCardItem__nome">${burger.nome}</div>
       <div class="BurgerCardItem__descricao">${burger.descricao}</div>
-      <div class="BurgerCardItem__preco">R$ ${burger.preco}</div> 
+      <div class="BurgerListaItem__botton">
+      <div class="BurgerListaItem__preco">R$ ${burger.preco.toFixed(2)}</div>
       <div class="BurgerListaItem__acoes Acoes">
-          <button class="Acoes__editar btn" onclick="abrirModal(${burger.id})"><img src="assets/icons/pencil.png" / width="20px"></button> 
-          <button class="Acoes__apagar btn" onclick="abrirModalDelete(${burger.id})"><img src="assets/icons/trash.png" / width="20px"></button> 
+        <button class="Acoes__editar btn" onclick="abrirModal(${
+          burger.id
+        })"><img src="assets/icons/pencil.png" / width="20px"></button> 
+        <button class="Acoes__apagar btn" onclick="abrirModalDelete(${
+          burger.id
+        })"><img src="assets/icons/trash.png" / width="20px"></button> 
       </div>
+    </div>
   </div>
   <img class="BurgerCardItem__foto" src="${burger.foto}" alt="${burger.nome}" />
 </div>`;
@@ -123,13 +137,20 @@ async function createBurger() {
     <div>
         <div class="BurgerListaItem__nome">${novoBurger.nome}</div>
         <div class="BurgerListaItem__descricao">${novoBurger.descricao}</div>
-        <div class="BurgerListaItem__preco">R$ ${novoBurger.preco}</div>
+        <div class="BurgerListaItem__botton">
+        <div class="BurgerListaItem__preco">R$ ${burger.preco.toFixed(2)}</div>
         <div class="BurgerListaItem__acoes Acoes">
-          <button class="Acoes__editar btn" onclick="abrirModal(${burger.id})"><img src="assets/icons/pencil.png" / width="20px"></button> 
-          <button class="Acoes__apagar btn" onclick="abrirModalDelete(${burger.id})"><img src="assets/icons/trash.png" / width="20px"></button> 
+          <button class="Acoes__editar btn" onclick="abrirModal(${
+            burger.id
+          })"><img src="assets/icons/pencil.png" / width="20px"></button> 
+          <button class="Acoes__apagar btn" onclick="abrirModalDelete(${
+            burger.id
+          })"><img src="assets/icons/trash.png" / width="20px"></button> 
         </div>
     </div>
-    <img class="BurgerListaItem__foto" src="${novoBurger.foto}" alt="Burger de ${novoBurger.nome}" />
+    <img class="BurgerListaItem__foto" src="${
+      novoBurger.foto
+    }" alt="Burger de ${novoBurger.nome}" />
   </div>`;
 
   if (modoEdicaoAtivado) {
